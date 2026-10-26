@@ -80,10 +80,9 @@ export default function MyAppCard({ data }: { data: myApplicationInterface }) {
           >
             <Paragraph style={{ color: "#DD8859", fontSize: 16 }}>
               {Intl.NumberFormat("fr-FR", { useGrouping: true }).format(
-                data.price / data.duration_month,
+                data.total_amount
               )}{" "}
-              DZD / {data.service_plan.subscription_category === "monthly" ? t("month") : t("year")}
-            </Paragraph>
+              DZD             </Paragraph>
           </Col>
         </Row>
 

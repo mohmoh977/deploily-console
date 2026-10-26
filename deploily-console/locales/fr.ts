@@ -583,7 +583,7 @@ export default {
   curlRequestSubtitle: "Extrait de code pour exécution en terminal",
   "adminConsole": "Console d'Administration",
   "manageYourService": "Gérez votre service",
-  "liveDemo": "Démo en Direct",
+  "liveDemo": "Émulateur TTK Epay",
   "tryItOut": "Essayez-le",
   "console": "Console",
   "serviceConsole": "Console du Service",

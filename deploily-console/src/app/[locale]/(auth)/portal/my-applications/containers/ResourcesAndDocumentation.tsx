@@ -92,16 +92,22 @@ export default function ResourcesAndDocumentation({
       </div>
 
       {/* Resource Cards */}
-      <Row gutter={[14, 14]}>
+     
+      <Row gutter={[14, 14]} align="stretch">
         {docsUrls.map(({ type, url }) => {
           const config = DOC_URL_CONFIG[type];
           return (
-            <Col key={type} xs={24} sm={12} lg={8}>
+            <Col key={type} xs={24} sm={12} lg={8} style={{ display: "flex" }}>
               <Link
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ textDecoration: "none", display: "block" }}
+                style={{
+                  textDecoration: "none",
+                  display: "block",
+                  width: "100%",
+                  height: "100%",
+                }}
               >
                 <div
                   style={{
@@ -112,6 +118,8 @@ export default function ResourcesAndDocumentation({
                     display: "flex",
                     alignItems: "center",
                     gap: 14,
+                    height: "100%",
+                    boxSizing: "border-box",
                     transition: "all 0.25s ease",
                     cursor: "pointer",
                   }}

@@ -51,13 +51,9 @@ export default function AppServiceSubscriptionSettingContent({
     <>
       <Typography.Title level={2} style={{ color: theme.token.orange400 }}>
         {Intl.NumberFormat("fr-FR", { useGrouping: true }).format(
-          appServiceSubscription?.price / appServiceSubscription?.duration_month,
+          appServiceSubscription?.total_amount,
         )}{" "}
-        DZD /{" "}
-        {appServiceSubscription?.service_plan.subscription_category === "monthly"
-          ? t("month")
-          : t("year")}
-      </Typography.Title>
+        DZD       </Typography.Title>
       <SubscriptionPlanCard currentSubscription={appServiceSubscription} />
       <ManagedResourcePlanDetails currentSubscription={appServiceSubscription} />
     </>
